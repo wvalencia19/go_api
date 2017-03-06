@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "First API on Golang",
+        "description": "practice for create golang API on Beego framework",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "wvalencia@tappsi.co"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/consumer/": {
+            "get": {
+                "tags": [
+                    "consumer"
+                ],
+                "description": "create object",
+                "operationId": "ConsumerController.GetIndexAction",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "latitude",
+                        "description": "Latitude from position",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "longitude",
+                        "description": "Longitude from position",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{objet} models.Coordinates"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        }
+    }
+}
