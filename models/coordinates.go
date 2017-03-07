@@ -9,6 +9,6 @@ const (
 
 // Coordinates Entity Including Latitude and Longitude Data
 type Coordinates struct {
-	Latitude  float64
-	Longitude float64
+	Latitude  string `json:"latitude"`
+	Longitude string `json:"longitude"`
 }

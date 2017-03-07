@@ -30,6 +30,6 @@ paths:
         type: string
       responses:
         "200":
-          description: '{objet} models.Coordinates'
+          description: '{objet} models.Result'
         "403":
           description: body is empty
